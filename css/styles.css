@@ -44,3 +44,24 @@ nav {
     color: white;
     text-decoration: none;
 }
+
+/********** BOOKING.HTML **********/
+#booking {
+  display: inline-flex;
+  margin-top: 10%;
+  padding: 2%;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #8c1e03;
+  font-family: 'Bodoni Moda', serif;
+}
+
+#booking span {
+  font-size: 2em;
+}
+
+#booking_form {
+  padding: 2%;
+  margin: 0 auto;
+}

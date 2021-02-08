@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Restaurang</title>
 </head>
 
 <body>
+    <nav>
+        <div class="logo">
+            <h4>Restaurang</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="landing-page.html">Hem</a></li>
+            <li><a href="#">Om restaurangen</a></li>
+            <li><a href="#">Meny</a></li>
+            <li><a href="booking.html">Boka bord</a></li>
+        </ul>
+    </nav>
 
-	<p> Test </p>
+		<div id="booking">
 
+			<span> Boka bord </span>
+
+			<div id="booking_form">
+				<form>
+					<label for="name"> Fullständigt namn: </label> <br>
+					<input id="name" type="text" name="name"> <br>
+					<label for="email"> Email: </label> <br>
+					<input id="email" type="text" name="email"> <br>
+
+					<label for="nr_of_guests"> Antal gäster: <label> <br>
+          <select name="nr_of_guests" id="nr_of_guests">
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+            <option value="four">4</option>
+            <option value="five">5</option>
+            <option value="six">6</option>
+            <option value="seven">7</option>
+            <option value="eight">8</option>
+            <option value="nine">9</option>
+            <option value="ten">10</option>
+          </select> <br>
+
+          <label for="date"> Ange datumet: </label> <br>
+					<input type="date"> <br><br>
+					<input id="submit" type="submit" name="submit" value="Godkänn">
+				</form>
+			</div>
+		</div>
 </body>
+
 </html>
