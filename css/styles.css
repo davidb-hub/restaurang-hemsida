@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-y: auto;
+    min-height: 600px;
+}
+
 html {
     background: url(../images/background-restaurant.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -12,12 +17,14 @@ html {
     -o-background-size: cover;
 }
 
+.animation-stop * {
+    transition: none !important;
+  }
+
 .logo {
     color: white;
     font-size: 20px;
     letter-spacing: 2px;
-    position: absolute;
-    left: 20px;
 }
 
 nav {
@@ -26,7 +33,9 @@ nav {
     align-items: center;
     background-color: #8c1e03;
     min-height: 8vh;
+    max-height: 12vh;
     font-family: 'Bodoni Moda', serif;
+
 }
 
 .nav-links {
@@ -51,27 +60,34 @@ nav {
     color: rgba(255, 255, 255, 0.7);
 }
 
+
 .content-container {
     display: flex;
-    height: auto;
-    width: auto;
-    margin: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%; 
-    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-items: center;
+    width: 400px;
+    margin: 0 auto;
+    min-height: 35em;
+}
+
+.content {
+    display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px 10px 10px 10px;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) );
+    background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8) );
 }
 
-.content-container p {
+
+.content p, h3 {
     word-spacing: 2px;
-    padding-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    letter-spacing: 0.5px;
+    margin: 5px;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
 }
-
 
 
 .nav-links li::after {
@@ -102,7 +118,12 @@ transition: transform 250ms ease-in;
 }
 
 .burger-nav {
-    display:none;
+    display: none;
+}
+
+
+.d-none {
+    display: none;
 }
 
 @media screen and (max-width:1024px) {
@@ -112,21 +133,55 @@ transition: transform 250ms ease-in;
     }
 }
 @media screen and (max-width:768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
     .nav-links {
-       position: absolute;
+    position: absolute;
        right: 0px;
-       height: 94vh;
-       top: 6vh;
+       height: 92vh;
+       top: 8vh;
        background-color: #8c1e03;
        display: flex;
        flex-direction: column;
        align-items: center;
        width: 40%;
+       transform: translateX(100%);
+       transition: transform 0.4s ease-in;
+       
+       
+       
     }
 
-    .content-container {
-        justify-content: flex-start;
+    .burger-nav {
+        display: block;
+        cursor: pointer;
+        
     }
+
+
+    .content-container {
+        transition: opacity 0.8s ease-in;
+    }
+
 }
+
+.fade-textBox {
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+
+.burger-active {
+    transform: translateX(0%);
+    
+}
+
+
+
+
+
 
 
