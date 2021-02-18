@@ -18,7 +18,7 @@ const burgerSlider = () => {
 
         nav.classList.toggle('burger-active');
         textBox.classList.toggle('fade-textBox');
-
+        
         burger.classList.toggle('burger-active');
 
     });
@@ -26,3 +26,5 @@ const burgerSlider = () => {
 }
 
 burgerSlider();
+
+
