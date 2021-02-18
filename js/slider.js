@@ -1,10 +1,10 @@
-let resizeTimer;
+let timer;
 window.addEventListener("resize", () => {
   document.body.classList.add("animation-stop");
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
+  clearTimeout(timer);
+  timer = setTimeout(() => {
     document.body.classList.remove("animation-stop");
-  }, 400);
+  }, 300);
 });
 
 
@@ -16,9 +16,10 @@ const burgerSlider = () => {
 
     burger.addEventListener('click', () => {
 
+
         nav.classList.toggle('burger-active');
         textBox.classList.toggle('fade-textBox');
-        
+        burger.classList.toggle('toggled-burger');
         burger.classList.toggle('burger-active');
 
     });
