@@ -5,11 +5,16 @@
 }
 
 body {
-    overflow-y: auto;
-    min-height: 600px;
-}
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+  
+    padding-bottom: 15rem;
+  }
+
 
 html {
+    height: 100%;
     background: url(../images/background-restaurant.jpg) no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
@@ -35,6 +40,7 @@ nav {
     min-height: 8vh;
     max-height: 12vh;
     font-family: 'Bodoni Moda', serif;
+    
 
 }
 
@@ -59,6 +65,13 @@ nav {
 .nav-links a:hover {
     color: rgba(255, 255, 255, 0.7);
 }
+
+
+div.burger-nav:hover div {
+    box-shadow: 2px 2px 5px rgba(3, 3, 3, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
 
 
 .content-container {
@@ -131,15 +144,20 @@ transition: transform 250ms ease-in;
         width: 60%;
 
     }
+
+    .content-container {
+        opacity: 1;
+    }
 }
 @media screen and (max-width:768px) {
 
     body {
         overflow-x: hidden;
+          
     }
 
     .nav-links {
-    position: absolute;
+        position: absolute;
        right: 0px;
        height: 92vh;
        top: 8vh;
@@ -150,20 +168,34 @@ transition: transform 250ms ease-in;
        width: 40%;
        transform: translateX(100%);
        transition: transform 0.4s ease-in;
-       
-       
-       
+       z-index: 1;
     }
 
     .burger-nav {
         display: block;
         cursor: pointer;
-        
+        transition: box-shadow .3s;   
     }
-
 
     .content-container {
         transition: opacity 0.8s ease-in;
+        z-index: -5;
+        
+    }
+
+    .footer-container {
+        transform: translateY(100%);
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .footer-container p {
+        margin-bottom: 10px;
+    }
+
+    .footer-container span {
+        margin-bottom: 10px;
     }
 
 }
@@ -171,13 +203,48 @@ transition: transform 250ms ease-in;
 .fade-textBox {
     opacity: 0;
     transition: opacity 0.4s ease-out;
+
 }
 
 
 .burger-active {
     transform: translateX(0%);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    min-height: 20vh;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    line-height: 1.7rem;
+    padding: 25px 25px 25px 25px;
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9) );
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
     
 }
+
+.content1 {
+    display: block;
+
+}
+.content2 {
+    display: block;
+
+}
+.content3 {
+    display: block;
+
+}
+
+
+
 
 
 
