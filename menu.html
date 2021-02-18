@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/menu_scripts.js"></script>
+    <title>Restaurang</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h4>Restaurang</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="landing-page.html">Hem</a></li>
+            <li><a href="#">Om restaurangen</a></li>
+            <li><a href="#">Meny</a></li>
+            <li><a href="booking.html">Boka bord</a></li>
+        </ul>
+    </nav>
+
+		<div id="menu">
+      <div id="sidebar_popdown" onclick="showMenu()"> Visa sortiment </div>
+      <div id="sidebar">
+        <li>
+          <ul onclick="showRequestedArticle('hamburger'); addCurrentPageClass( this );" class="current_page"> Hamburgare </ul>
+          <ul onclick="showRequestedArticle('beef_wellington'); addCurrentPageClass( this );"> Beef Wellington </ul>
+          <ul onclick="showRequestedArticle('carbonara'); addCurrentPageClass( this );"> Pasta Carbonara </ul>
+          <ul onclick="showRequestedArticle('club_sandwich'); addCurrentPageClass( this );"> Club Sandwich </ul>
+          <ul onclick="showRequestedArticle('goulash'); addCurrentPageClass( this );"> Goulash </ul>
+          <ul onclick="showRequestedArticle('kottbullar'); addCurrentPageClass( this );"> Köttbullar </ul>
+          <ul onclick="showRequestedArticle('ravioli'); addCurrentPageClass( this );"> Ravioli </ul>
+          <ul onclick="showRequestedArticle('steak'); addCurrentPageClass( this );"> Steak </ul>
+        </li>
+      </div>
+
+      <div id="hamburger" class="article">
+        <img src="images/hamburger.jpg"/>
+        <h3> Hamburgare </h3>
+        <p> Ingredienser:<br><br>
+            800 gr köttfärs.<br>
+            75 gr fint strimlat bacon.<br>
+            3 msk matolja.<br>
+            1-2 tsk salt.<br>
+            2 tsk tigersås.<br>
+            1 tsk nymald svartpeppar.<br>
+            2 tsk chilipulver.<br>
+        </p>
+      </div>
+
+      <div id="beef_wellington" class="article">
+        <img src="images/beef_wellington.jpg"/>
+        <h3> Beef Wellington </h3>
+        <p>
+          Ingredienser:<br><br>
+
+          600 gram hel oxfilé, gärna mittbiten, putsad<br>
+          3 plattor smördeg (9x17 cm) eller ca 30 cm smördeg på rulle<br>
+          2 äggulor<br>
+          1 dl vetemjöl att kavla ut med<br>
+          Svampfyllning: 300 gram champinjoner<br>
+          0,5 gul lök<br>
+          1 klyfta vitlök<br>
+          3 msk smör<br>
+          0,5 dl portvin<br>
+          2 msk ljus soja<br>
+          0,5 tsk salt<br>
+          2 krm svartpeppar<br>
+          Skysås med portvin: 50 gram smör<br>
+          0,5 gul lök<br>
+          2 msk vetemjöl<br>
+          2 dl portvin<br>
+          2 dl vatten<br>
+          Rostade potatishalvor: 900 gram delikatesspotatis ex. Amandine<br>
+          2 msk rapsolja eller annan vegetabilisk olja<br>
+          1 krm salt<br>
+          0,5 tsk flingsalt till servering<br>
+          Rostad blomkål: 1 huvud blomkål<br>
+          2 klyftor vitlök<br>
+          2 krm gurkmeja<br>
+          3 krm chiliflakes<br><br>
+          2 msk olivolja eller matolja<br>
+          1 krm salt<br>
+          0,5 krm vitpeppar<br>
+          1 huvud kokt broccoli<br>
+          5 kokta slantade morötter<br>
+
+        </p>
+      </div>
+
+      <div id="carbonara" class="article">
+        <img src="images/carbonara.jpg"/>
+        <h3> Pasta Carbonara </h3>
+        <p>
+          Ingredienser:<br><br>
+          500 g färsk spaghetti<br>
+          2 paket bacon (klippt i 2 cm bitar)<br>
+          4 ägg<br>
+          1 dl vispgrädde<br>
+          2 dl riven parmesanost<br>
+          1/2 tsk salt<br>
+          2 krm nymalen Tellicherry svartpeppar<br>
+
+        </p>
+      </div>
+
+      <div id="club_sandwich" class="article">
+        <img src="images/club_sandwich.jpg"/>
+        <h3> Club Sandwich </h3>
+        <p>
+          Ingredienser: <br><br>
+          1 kycklingfilé<br>
+          2 krm salt<br>
+          1 krm nymalen svartpeppar<br>
+          smör (till stekning)<br>
+          1/2 paket, skivat bacon (à 140 g)<br>
+          1 tomat<br>
+          3 skivor, ljust surdegsbröd<br>
+          2 - 3 romansalladsblad<br>
+          trägrillspett<br>
+
+        </p>
+      </div>
+
+      <div id="goulash" class="article">
+        <img src="images/goulash.png"/>
+        <h3> Goulash </h3>
+        <p>
+          Ingredienser:<br><br>
+          4 potatisar<br>
+          1 paprika<br>
+          1 gul lök<br>
+          2 msk olja<br>
+          500 g köttfärs<br>
+          6 dl vatten<br>
+          1 köttbuljongtärning<br>
+          500 g krossade tomater<br>
+          2 tsk kummin<br>
+          - salt och peppar<br>
+
+        </p>
+      </div>
+
+      <div id="kottbullar" class="article">
+        <img src="images/kottbullar.jpg"/>
+        <h3> Köttbullar med potatismos och grönsaker </h3>
+        <p>
+          Ingredienser:<br><br>
+          1 1/2 dl mjölk<br>
+          5 msk ströbröd<br>
+          500 g nöt- eller blandfärs<br>
+          1/2 gul lök (skalad och riven)<br>
+          1 ägg<br>
+          1 tsk salt<br>
+          1 krm peppar<br>
+          1/2 tsk socker<br>
+          - smör eller margarin<br>
+
+        </p>
+      </div>
+
+      <div id="ravioli" class="article">
+        <img src="images/ravioli.jpg"/>
+        <h3> Ravioli </h3>
+        <p>
+          Ingredienser:<br><br>
+
+          5 dl durumvetemjöl<br>
+          4 ekologiska ägg<br>
+          1 msk Extra jungfruolivolja Classico<br>
+          200 g färsk mangold eller spenat<br>
+          Extra jungfruolivolja Classico<br>
+          1 dl Ricotta<br>
+          1/2 dl Parmigiano Reggiano 14 mån, riven<br>
+          1/2 citron, finrivet skal<br>
+          1 krm nyriven muskotnöt<br>
+          Salt och nymalen svartpeppar<br>
+
+        </p>
+      </div>
+
+      <div id="steak" class="article">
+        <img src="images/steak.jpg"/>
+        <h3> Steak </h3>
+        <p>
+          Ingredienser:<br><br>
+          700-800 g oxryggbiff n (eller främre delen av oxfilé)<br>
+          2 msk olivolja, till pensling<br>
+          salt<br>
+          peppar<br>
+          800 g fast potatis<br>
+          2 l frityrolja<br>
+          salt (efter smak)<br>
+        </p>
+      </div>
+		</div>
+</body>
+
+</html>

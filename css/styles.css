@@ -45,9 +45,9 @@ nav {
     text-decoration: none;
 }
 
-/********** BOOKING.HTML **********/
+/********** BOOKING **********/
 #booking {
-  display: inline-flex;
+  display: inline-block;
   margin-top: 10%;
   padding: 2%;
   width: 100%;
@@ -57,11 +57,105 @@ nav {
   font-family: 'Bodoni Moda', serif;
 }
 
-#booking span {
+#booking p {
   font-size: 2em;
 }
 
 #booking_form {
   padding: 2%;
-  margin: 0 auto;
+  margin-left: 60%;
+}
+
+/********** MENU **********/
+#menu {
+  display: inline-block;
+  margin-top: 10%;
+  padding: 2%;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #8c1e03;
+  font-family: 'Bodoni Moda', serif;
+}
+
+#menu img {
+  max-width: 500px;
+  max-height: 500px;
+  float: left;
+  margin: 0 2%;
+  border-radius: 15px;
+  box-shadow: 2px 2px #221e03;
+}
+
+#sidebar_popdown {
+  width: auto;
+  padding: 10px;
+}
+
+#sidebar_popdown:hover {
+  background-color: #221e03;
+  color: #fff;
+}
+
+#sidebar {
+  list-style-type: none;
+  margin-top: 2%;
+  float: left;
+  width: 10%;
+  display: none;
+}
+
+#sidebar ul {
+  padding: 10px;
+  margin: 0;
+}
+
+#sidebar ul:hover {
+  background-color: #221e03;
+  color: #fff;
+}
+
+.current_page {
+  background-color: #221e03;
+  color: #fff;
+}
+
+.article {
+  float: left;
+  padding: 20px;
+  width: 90%;
+}
+
+@media (max-width: 1500px) {
+  #booking p {
+    text-align: center;
+    margin-bottom: 7%;
+  }
+
+  #booking_form {
+    margin-left: 33%;
+  }
+
+  #menu img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  #sidebar_popdown {
+    width: 10% auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #sidebar {
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+
+  #sidebar ul {
+    display: table;
+    margin: 0 auto;
+    width: auto;
+  }
 }
